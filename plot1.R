@@ -6,7 +6,6 @@ setwd("C:/Users/SUNEEKSHA/Desktop/EDAprojectweek1")
 pwrdeetee <- data.table::fread(input = "household_power_consumption.txt"
                              , na.strings="?"
 )
-
 # Histogram is prevented from printing
 pwrdeetee[, Global_active_power := lapply(.SD, as.numeric), .SDcols = c("Global_active_power")]
 
